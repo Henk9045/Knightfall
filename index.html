@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Knight's Quest</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+            background: #10131a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow-x: hidden;
+        }
+        .game-container {
+            width: 100%;
+            max-width: 1250px;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 5px 0 10px;
+            font-size: 34px;
+            letter-spacing: 2px;
+        }
+        .subtitle {
+            margin: 0 0 15px;
+            color: #aeb7c4;
+            font-size: 15px;
+        }
+        .canvas-container {
+            width: 100%;
+            overflow: hidden;
+            border: 3px solid #555e70;
+            border-radius: 8px;
+            background: #000;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+            background: #000;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+        }
+        .controls {
+            margin-top: 15px;
+            padding: 14px;
+            border-radius: 8px;
+            background: #1c2029;
+            border: 1px solid #343b49;
+            line-height: 1.7;
+        }
+        .controls strong {
+            color: #ffd85a;
+        }
+        .controls span {
+            margin: 0 7px;
+            white-space: nowrap;
+        }
+        .github-note {
+            margin-top: 12px;
+            color: #777f8d;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>⚔️ Knight's Quest</h1>
+        <p class="subtitle">
+            Explore the kingdom. Find powerful gear. Defeat the Shadow King.
+        </p>
+        <div class="canvas-container">
+            <canvas
+                id="gameCanvas"
+                width="1200"
+                height="680">
+            </canvas>
+        </div>
+        <div class="controls">
+            <strong>Controls:</strong>
+            <span>A / D or ← / → Move</span>
+            <span>W / ↑ / Space Jump</span>
+            <span>J Attack</span>
+            <span>I Inventory</span>
+            <span>1–9 Equip</span>
+            <span>Backspace Discard</span>
+            <span>R Restart</span>
+        </div>
+        <div class="github-note">
+            Knight's Quest — Open World
+        </div>
+    </div>
+    <!--
+        IMPORTANT:
+        game.js must be in the SAME folder as this index.html.
+    -->
+    <script src="game.js"></script>
+</body>
+</html>
